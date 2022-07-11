@@ -191,7 +191,7 @@ nav .notification p {
     opacity: 1;
   }
 
-  90% {
+  80% {
     opacity: 1;
     pointer-events: auto;
     display: block;
