@@ -1,10 +1,10 @@
+:is(html, body) {
+  height: 100%;
+}
+
 body {
   font-family: "Circular", Arial, Helvetica, sans-serif;
   line-height: 1.6;
-}
-
-:is(html, body) {
-  height: 100%;
 }
 
 p,
@@ -155,7 +155,7 @@ nav .notification {
   padding: 16px;
   border-radius: 0.3em;
   transform: translate3d(173px, 169px, 0);
-  animation: fade-out 1s both;
+  animation: fade-out 4s both;
   z-index: 2;
 }
 
