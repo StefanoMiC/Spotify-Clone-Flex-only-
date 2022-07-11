@@ -145,6 +145,74 @@ nav .policies a:hover {
   text-decoration: underline;
 }
 
+nav .notification {
+  --blue: #0c72ea;
+  position: absolute;
+  background-color: var(--blue);
+  max-width: 336px;
+  min-width: 300px;
+  inset: 0px auto auto 0px;
+  padding: 16px;
+  border-radius: 0.3em;
+  transform: translate3d(173px, 169px, 0);
+  animation: fade-in-out 1s both;
+  z-index: 2;
+}
+
+nav li:nth-of-type(3):hover .notification {
+  animation: none;
+}
+
+nav .notification::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 18px;
+  left: -7px;
+  border-style: solid;
+  border-width: 7px 7px 7px 0px;
+  border-color: transparent var(--blue) transparent transparent;
+}
+
+nav .notification h4 {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+nav .notification p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+@keyframes fade-in-out {
+  0% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 1;
+    pointer-events: auto;
+    display: block;
+  }
+  100% {
+    opacity: 0;
+    pointer-events: none;
+    display: none;
+  }
+}
+
+@keyframes restart {
+  0% {
+    display: block;
+  }
+  5% {
+    opacity: 0;
+    display: none;
+  }
+}
+
 main {
   color: white;
   min-height: 100px;
